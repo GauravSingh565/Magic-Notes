@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+.navbar-brand i {
+  color: #111 !important;
+}
+.nav-link {
+  color: #111 !important;
+  font-size: 1.5rem;
+}
+.btn {
+  color: #111;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+.btn:hover {
+  background-color: rgba(62, 65, 247, 0.973);
+  color: #fff;
+  transition: all 0.5s ease;
+}
+.btn:focus {
+  outline-style: none;
+}
+.notecard {
+  padding: 15px;
+}
+textarea:focus {
+  outline-style: none !important;
+}
+.navbar-toggler-icon {
+  background-color: #111 !important;
+}
+.notecard {
+  width: 19rem !important;
+  border: none;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  padding: 10px 20px !important;
+}
+#deleteBtn {
+  font-size: 1rem;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(91, 14, 233);
+  color: #fff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+#deleteBtn:hover {
+  background-color: rgba(62, 65, 247, 0.973);
+  transition: all 0.6s ease;
+}
+#title {
+  margin: 10px 0px;
+  width: 50%;
+}
+
+#note-title {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+#note-title:focus {
+  outline-style: none !important;
+}
+.container {
+  height: auto;
+  width: 100%;
+  padding: 50px 0px;
+}
+#time {
+  margin-left: 30px;
+}
+
+.close:focus {
+  outline-style: none !important;
+}
+#date {
+  margin-right: 3px;
+}
+#month {
+  margin-right: 3px;
+}
+@media (max-width: 1024px) {
+  .container {
+    padding-bottom: 800px !important;
+  }
+}
+@media (max-width: 800px) {
+  .container {
+    padding-bottom: 500px !important;
+  }
+  h1 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    padding-bottom: 50px !important;
+  }
+}
+@media (max-width: 450px) {
+  .container {
+    padding-bottom: 160px !important;
+  }
+}
+@media (max-width: 400px) {
+  .container {
+    padding-bottom: 120px !important;
+  }
+  #time {
+    margin-left: 15px;
+  }
+}
+@media (max-width: 360px) {
+  #time {
+    margin-left: 11px;
+  }
+  .alert strong {
+    font-size: 0.9rem !important;
+  }
+}
