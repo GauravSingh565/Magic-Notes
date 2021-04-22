@@ -69,6 +69,7 @@ addbtn.addEventListener("click", function () {
     let mynote = {
       mytitle: notetitle.value,
       notevalue: input.value,
+      date: time,
     };
     // console.log(mynote.notetext);
     local(mynote);
@@ -165,6 +166,7 @@ function getnotes() {
     time.appendChild(date);
     time.appendChild(month);
     time.appendChild(year);
+    time.innerHTML = element.date;
     noteBody.appendChild(time);
 
     // append notebody to div-----------
@@ -176,6 +178,7 @@ function getnotes() {
     let mynote = {
       mytitle: notetitle.value,
       notevalue: input.value,
+      date: time,
     };
     // delete note from list----------------------------
     deletebtn.addEventListener("click", function () {
