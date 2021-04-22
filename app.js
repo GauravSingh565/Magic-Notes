@@ -69,7 +69,9 @@ addbtn.addEventListener("click", function () {
     let mynote = {
       mytitle: notetitle.value,
       notevalue: input.value,
-      date: time,
+      noteDate: date.innerHTML,
+      noteMonth: month.innerHTML,
+      noteYear: year.innerHTML,
     };
     // console.log(mynote.notetext);
     local(mynote);
@@ -91,6 +93,9 @@ addbtn.addEventListener("click", function () {
              `;
     alert.innerHTML = alertmsg;
   }
+  setTimeout(() => {
+    alert.innerHTML = " ";
+  }, 2000);
   notetitle.value = "";
   input.value = "";
 });
@@ -158,15 +163,15 @@ function getnotes() {
     noteBody.appendChild(title);
     notetxt.innerHTML = element.notevalue;
     deletebtn.innerHTML = `Delete Note`;
-    month.innerHTML = months[newDate.getMonth()];
-    date.innerHTML = new Date().getDate();
-    year.innerHTML = new Date().getFullYear();
+    month.innerHTML = element.noteMonth;
+    date.innerHTML = element.noteDate;
+    year.innerHTML = element.noteYear;
     noteBody.appendChild(notetxt);
     noteBody.appendChild(deletebtn);
     time.appendChild(date);
     time.appendChild(month);
     time.appendChild(year);
-    time.innerHTML = element.date;
+
     noteBody.appendChild(time);
 
     // append notebody to div-----------
@@ -197,6 +202,7 @@ function removenote(note_2) {
     notes = JSON.parse(localStorage.getItem("notes"));
   }
   let noteIndex = note_2;
+  // console.log(noteIndex);
   notes.splice(notes.indexOf(noteIndex), 1);
   localStorage.setItem("notes", JSON.stringify(notes));
 }
